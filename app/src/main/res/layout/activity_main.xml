@@ -1,15 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/A1"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <Button
+            android:id="@+id/A2"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <Button
+            android:id="@+id/A3"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <Button
+            android:id="@+id/A4"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="312dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <Button
+            android:id="@+id/B1"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="261dp" />
+
+        <Button
+            android:id="@+id/B2"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="261dp" />
+
+        <Button
+            android:id="@+id/B3"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="261dp" />
+
+        <Button
+            android:id="@+id/B4"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="311dp"
+            tools:layout_editor_absoluteY="261dp" />
+
+        <Button
+            android:id="@+id/C1"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <Button
+            android:id="@+id/C2"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <Button
+            android:id="@+id/C3"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <Button
+            android:id="@+id/C4"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="311dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <Button
+            android:id="@+id/D1"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+        <Button
+            android:id="@+id/D2"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+        <Button
+            android:id="@+id/D3"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+        <Button
+            android:id="@+id/D4"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            tools:layout_editor_absoluteX="312dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+        <Button
+            android:id="@+id/Up"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:text="N"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="585dp" />
+
+        <Button
+            android:id="@+id/Right"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:text="E"
+            tools:layout_editor_absoluteX="335dp"
+            tools:layout_editor_absoluteY="625dp" />
+
+        <Button
+            android:id="@+id/Left"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:text="W"
+            tools:layout_editor_absoluteX="252dp"
+            tools:layout_editor_absoluteY="625dp" />
+
+        <Button
+            android:id="@+id/Down"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:text="S"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="666dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        layout="@layout/content_main"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
@@ -20,15 +176,5 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_main"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </android.support.design.widget.CoordinatorLayout>

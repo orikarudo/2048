@@ -8,8 +8,33 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    Button Up;
+    Button Down;
+    Button Left;
+    Button Right;
+
+    Button A0 = (Button)findViewById(R.id.A1);
+    Button A1 = (Button)findViewById(R.id.A2);
+    Button A2 = (Button)findViewById(R.id.A3);
+    Button A3 = (Button)findViewById(R.id.A4);
+    Button B0 = (Button)findViewById(R.id.B1);
+    Button B1 = (Button)findViewById(R.id.B2);
+    Button B2 = (Button)findViewById(R.id.B3);
+    Button B3 = (Button)findViewById(R.id.B4);
+    Button C0 = (Button)findViewById(R.id.C1);
+    Button C1 = (Button)findViewById(R.id.C2);
+    Button C2 = (Button)findViewById(R.id.C3);
+    Button C3 = (Button)findViewById(R.id.C4);
+    Button D0 = (Button)findViewById(R.id.D1);
+    Button D1 = (Button)findViewById(R.id.D2);
+    Button D2 = (Button)findViewById(R.id.D3);
+    Button D3 = (Button)findViewById(R.id.D4);
+
+    Button[] allButtons = new Button[16];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +43,40 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Up = (Button)findViewById(R.id.Up);
+        Down = (Button)findViewById(R.id.Down);
+        Left = (Button)findViewById(R.id.Left);
+        Right = (Button)findViewById(R.id.Right);
+
+        Up.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view){
+
             }
         });
+
+        Down.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+            }
+        });
+
+        Left.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+            }
+        });
+
+        Right.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+            }
+        });
+
+
     }
 
     @Override
