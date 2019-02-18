@@ -9,8 +9,32 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="217dp"
+                android:layout_height="73dp"
+                android:text="2048"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="36sp"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="94dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+
+                <Button
             android:id="@+id/A1"
             android:layout_width="84dp"
             android:layout_height="75dp"
@@ -37,6 +61,11 @@
             android:layout_height="75dp"
             tools:layout_editor_absoluteX="312dp"
             tools:layout_editor_absoluteY="179dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/B1"
@@ -65,6 +94,11 @@
             android:layout_height="75dp"
             tools:layout_editor_absoluteX="311dp"
             tools:layout_editor_absoluteY="261dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/C1"
@@ -94,6 +128,11 @@
             tools:layout_editor_absoluteX="311dp"
             tools:layout_editor_absoluteY="336dp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
         <Button
             android:id="@+id/D1"
             android:layout_width="84dp"
@@ -121,6 +160,8 @@
             android:layout_height="75dp"
             tools:layout_editor_absoluteX="312dp"
             tools:layout_editor_absoluteY="411dp" />
+
+            </LinearLayout>
 
         <Button
             android:id="@+id/Up"
@@ -153,6 +194,8 @@
             android:text="S"
             tools:layout_editor_absoluteX="295dp"
             tools:layout_editor_absoluteY="666dp" />
+        </LinearLayout>
+
 
     </android.support.constraint.ConstraintLayout>
 
