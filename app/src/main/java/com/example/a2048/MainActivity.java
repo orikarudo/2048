@@ -1,5 +1,5 @@
 package com.example.a2048;
-
+import java.util.Random;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -207,9 +207,9 @@ public class MainActivity extends AppCompatActivity {
 
         downRow3 = new ArrayList<Button>();
         downRow3.add(D3);
-        downRow3.add(D2);
-        downRow3.add(D1);
-        downRow3.add(D0);
+        downRow3.add(C3);
+        downRow3.add(B3);
+        downRow3.add(A3);
 
         Up.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -256,24 +256,101 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        randTile();
+        randTile();
     }
 
     public void compressTiles(List<Button> list) {
         int[] values = new int[4];
-        int num_non_zero = 0;
+
+
+
+        //taking values of buttons and putting it into "values" list
         for (int i = 0; i < 4; ++i)
         {
             Button b = list.get(i);
             CharSequence s = b.getText();
-            values[i] = (int) Integer.parseInt((String) s);
-            values[i] = values[i] + 10;
-            b.setText(String.format("%d", values[i]));
+            if(s == "") {
+                values[i] = 0;
+
+            }
+            else{
+                values[i] = (int) Integer.parseInt((String) s);
+            }
+        }
+
+        int u = 3;
+        int emp =0;
+        while(u<3){
+            if(values[u]==0){
+                int p = u;
+                while(p<3){
+                    values[p]=values[p+1];
+                    if(p==2){
+                        values[p+1]=0;
+                    }
+                    p++;
+                }
+                emp++;
+                if(emp==4){
+                    u=4;
+                }
+                continue;
+            }
+        }
+
+        int x = 0;
+        int emptyRow = 0;
+        while(x < 3){
+            if(values[x]==0){
+                int p = x;
+                while(p<3){
+                    values[p]=values[p+1];
+                    if(p==2){
+                        values[p+1]=0;
+                    }
+                    p++;
+                }
+                emptyRow++;
+                if(emptyRow==4){
+                    x=4;
+                }
+                continue;
+            }
+            if(values[x]==values[x+1]){
+                values[x]= (2*values[x]);
+                values[x+1]=0;
+
+            }
+            x++;
+        }
+
+        //setting button values to new compressed values
+        for (int q = 0; q < 4; ++q) {
+            Button b = list.get(q);
+            if(values[q]==0){
+                b.setText("");
+            }
+            else{
+                b.setText(String.format("%d", values[q]));
+            }
+
         }
     }
 
     public void randTile(){
-
+        int x = 0;
+        while(x==0){
+            Random r = new Random();
+            int low = 0;
+            int high = 16;
+            int randNum = r.nextInt(high-low) + low;
+            Button b = allBtns.get(randNum);
+            if(b.getText()==""){
+                b.setText("2");
+                x=613;
+            }
+        }
     }
 
 
