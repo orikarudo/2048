@@ -163,37 +163,38 @@
 
             </LinearLayout>
 
-        <Button
-            android:id="@+id/Up"
-            android:layout_width="50dp"
-            android:layout_height="49dp"
-            android:text="N"
-            tools:layout_editor_absoluteX="295dp"
-            tools:layout_editor_absoluteY="585dp" />
+            <Button
+                android:id="@+id/Up"
+                android:layout_width="166dp"
+                android:layout_height="49dp"
+                android:text="Up"
+                tools:layout_editor_absoluteX="295dp"
+                tools:layout_editor_absoluteY="585dp" />
 
-        <Button
-            android:id="@+id/Right"
-            android:layout_width="50dp"
-            android:layout_height="49dp"
-            android:text="E"
-            tools:layout_editor_absoluteX="335dp"
-            tools:layout_editor_absoluteY="625dp" />
+            <Button
+                android:id="@+id/Down"
+                android:layout_width="160dp"
+                android:layout_height="49dp"
+                android:text="Down"
+                tools:layout_editor_absoluteX="295dp"
+                tools:layout_editor_absoluteY="666dp" />
 
-        <Button
-            android:id="@+id/Left"
-            android:layout_width="50dp"
-            android:layout_height="49dp"
-            android:text="W"
-            tools:layout_editor_absoluteX="252dp"
-            tools:layout_editor_absoluteY="625dp" />
+            <Button
+                android:id="@+id/Right"
+                android:layout_width="156dp"
+                android:layout_height="49dp"
+                android:text="Right"
+                tools:layout_editor_absoluteX="335dp"
+                tools:layout_editor_absoluteY="625dp" />
 
-        <Button
-            android:id="@+id/Down"
-            android:layout_width="50dp"
-            android:layout_height="49dp"
-            android:text="S"
-            tools:layout_editor_absoluteX="295dp"
-            tools:layout_editor_absoluteY="666dp" />
+            <Button
+                android:id="@+id/Left"
+                android:layout_width="158dp"
+                android:layout_height="49dp"
+                android:text="Left"
+                tools:layout_editor_absoluteX="252dp"
+                tools:layout_editor_absoluteY="625dp" />
+
         </LinearLayout>
 
 

@@ -18,7 +18,29 @@ public class MainActivity extends AppCompatActivity {
     Button Left;
     Button Right;
 
+    List<Button> allBtns;
+
+
     List<Button> leftRow0;
+    List<Button> leftRow1;
+    List<Button> leftRow2;
+    List<Button> leftRow3;
+
+    List<Button> rightRow0;
+    List<Button> rightRow1;
+    List<Button> rightRow2;
+    List<Button> rightRow3;
+
+    List<Button> upRow0;
+    List<Button> upRow1;
+    List<Button> upRow2;
+    List<Button> upRow3;
+
+    List<Button> downRow0;
+    List<Button> downRow1;
+    List<Button> downRow2;
+    List<Button> downRow3;
+
 
 
     /*public void myCompress(){
@@ -54,48 +76,182 @@ public class MainActivity extends AppCompatActivity {
         Button D2 = (Button)findViewById(R.id.D3);
         Button D3 = (Button)findViewById(R.id.D4);
 
-        A0.setText("2");
-        A1.setText("4");
-        A2.setText("8");
-        A3.setText("16");
+        A0.setText("");
+        A1.setText("");
+        A2.setText("");
+        A3.setText("");
+        B0.setText("");
+        B1.setText("");
+        B2.setText("");
+        B3.setText("");
+        C0.setText("");
+        C1.setText("");
+        C2.setText("");
+        C3.setText("");
+        D0.setText("");
+        D1.setText("");
+        D2.setText("");
+        D3.setText("");
 
-        List<Button> allBtns = new ArrayList<Button>();
-        allBtns.add(0, A0);
 
-        List<Integer> testing = new ArrayList<Integer>();
-        testing.add(0, 44);
+        allBtns = new ArrayList<Button>();
+        allBtns.add(A0);
+        allBtns.add(A1);
+        allBtns.add(A2);
+        allBtns.add(A3);
+        allBtns.add(B0);
+        allBtns.add(B1);
+        allBtns.add(B2);
+        allBtns.add(B3);
+        allBtns.add(C0);
+        allBtns.add(C1);
+        allBtns.add(C2);
+        allBtns.add(C3);
+        allBtns.add(D0);
+        allBtns.add(D1);
+        allBtns.add(D2);
+        allBtns.add(D3);
 
         leftRow0 = new ArrayList<Button>();
-        leftRow0.add(0, A0);
-        leftRow0.add(1, A1);
-        leftRow0.add(2, A2);
-        leftRow0.add(3, A3);
+        leftRow0.add(A0);
+        leftRow0.add(A1);
+        leftRow0.add(A2);
+        leftRow0.add(A3);
+
+        leftRow1 = new ArrayList<Button>();
+        leftRow1.add(B0);
+        leftRow1.add(B1);
+        leftRow1.add(B2);
+        leftRow1.add(B3);
+
+        leftRow2 = new ArrayList<Button>();
+        leftRow2.add(C0);
+        leftRow2.add(C1);
+        leftRow2.add(C2);
+        leftRow2.add(C3);
+
+        leftRow3 = new ArrayList<Button>();
+        leftRow3.add(D0);
+        leftRow3.add(D1);
+        leftRow3.add(D2);
+        leftRow3.add(D3);
+
+
+        rightRow0 = new ArrayList<Button>();
+        rightRow0.add(A3);
+        rightRow0.add(A2);
+        rightRow0.add(A1);
+        rightRow0.add(A0);
+
+        rightRow1 = new ArrayList<Button>();
+        rightRow1.add(B3);
+        rightRow1.add(B2);
+        rightRow1.add(B1);
+        rightRow1.add(B0);
+
+        rightRow2 = new ArrayList<Button>();
+        rightRow2.add(C3);
+        rightRow2.add(C2);
+        rightRow2.add(C1);
+        rightRow2.add(C0);
+
+        rightRow3 = new ArrayList<Button>();
+        rightRow3.add(D3);
+        rightRow3.add(D2);
+        rightRow3.add(D1);
+        rightRow3.add(D0);
+
+
+        upRow0 = new ArrayList<Button>();
+        upRow0.add(A0);
+        upRow0.add(B0);
+        upRow0.add(C0);
+        upRow0.add(D0);
+
+        upRow1 = new ArrayList<Button>();
+        upRow1.add(A1);
+        upRow1.add(B1);
+        upRow1.add(C1);
+        upRow1.add(D1);
+
+        upRow2 = new ArrayList<Button>();
+        upRow2.add(A2);
+        upRow2.add(B2);
+        upRow2.add(C2);
+        upRow2.add(D2);
+
+        upRow3 = new ArrayList<Button>();
+        upRow3.add(A3);
+        upRow3.add(B3);
+        upRow3.add(C3);
+        upRow3.add(D3);
+
+
+        downRow0 = new ArrayList<Button>();
+        downRow0.add(D0);
+        downRow0.add(C0);
+        downRow0.add(B0);
+        downRow0.add(A0);
+
+        downRow1 = new ArrayList<Button>();
+        downRow1.add(D1);
+        downRow1.add(C1);
+        downRow1.add(B1);
+        downRow1.add(A1);
+
+        downRow2 = new ArrayList<Button>();
+        downRow2.add(D2);
+        downRow2.add(C2);
+        downRow2.add(B2);
+        downRow2.add(A2);
+
+        downRow3 = new ArrayList<Button>();
+        downRow3.add(D3);
+        downRow3.add(D2);
+        downRow3.add(D1);
+        downRow3.add(D0);
 
         Up.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                compressTiles(upRow0);
+                compressTiles(upRow1);
+                compressTiles(upRow2);
+                compressTiles(upRow3);
+                randTile();
             }
         });
 
         Down.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                compressTiles(downRow0);
+                compressTiles(downRow1);
+                compressTiles(downRow2);
+                compressTiles(downRow3);
+                randTile();
             }
         });
 
         Left.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                compressTiles(leftRow0);
+                compressTiles(leftRow1);
+                compressTiles(leftRow2);
+                compressTiles(leftRow3);
+                randTile();
             }
         });
 
         Right.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                compressTiles(leftRow0);
+                compressTiles(rightRow0);
+                compressTiles(rightRow1);
+                compressTiles(rightRow2);
+                compressTiles(rightRow3);
+                randTile();
 
             }
         });
@@ -103,8 +259,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void compressTiles(List<Button> list)
-    {
+    public void compressTiles(List<Button> list) {
         int[] values = new int[4];
         int num_non_zero = 0;
         for (int i = 0; i < 4; ++i)
@@ -116,6 +271,11 @@ public class MainActivity extends AppCompatActivity {
             b.setText(String.format("%d", values[i]));
         }
     }
+
+    public void randTile(){
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
